@@ -1,24 +1,18 @@
-
 def jogar():
 
-      print("*************************** \n"
-            "Bom vindo ao jogo da forca! \n"
-            "***************************")
+      print('*************************** \n'
+            'Bom vindo ao jogo da forca! \n'
+            '***************************')
 
-      print("Qual nível de dificuldade você quer? \n (1)Fácil (2) Médio (3)Difícil")
+      palavra_secreta = 'banana'
+      enforcou = False
+      acertou = False
 
-      print("Fim do jogo")
+      while(not enforcou and not acertou):
+            print('jogando...')
+            break
 
-def jogars():
+      print('Fim do jogo')
 
-      print("*************************** \n"
-            "Bom vindo ao jogo da forcas! \n"
-            "***************************")
-
-      print("Qual nível de dificuldade você quer? \n (1)Fácil (2) Médio (3)Difícil")
-
-      print("Fim do jogo")
-
-
-# if(__name__ == '__main__'):
-#       jogar()
+if(__name__ == '__main__'):
+      jogar()
