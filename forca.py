@@ -1,7 +1,7 @@
 def jogar():
 
       print(9 * '.**',
-            '\n Bem vindo ao jogo da Forca! \n',
+            '\nBem vindo ao jogo da Forca!\n',
             9 * '.**')
 
       palavra_secreta = 'banana'.upper()
@@ -34,7 +34,7 @@ def jogar():
                   print('Você perdeu!')
                   break
 
-      print('Fim do jogo')
+      print(f'A Palavra Secreta era {palavra_secreta}! \nFim do jogo')
 
 if(__name__ == '__main__'):
       jogar()
