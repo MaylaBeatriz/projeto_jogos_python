@@ -23,10 +23,7 @@ def jogar():
                         index += 1
             else:
                   tentativas += 1
-
-            enforcou = tentativas == 6
-
-            acertou = '_' not in letras_acertadas
+                  print(f'Restam {6 - tentativas} tentativas.')
 
             print(letras_acertadas)
 
