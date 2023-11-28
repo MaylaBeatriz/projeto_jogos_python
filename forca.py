@@ -1,18 +1,18 @@
 def jogar():
 
-      print('*************************** \n'
-            'Bom vindo ao jogo da forca! \n'
-            '***************************')
+      print(9 * '.**',
+            '\n Bem vindo ao jogo da Forca! \n',
+            9 * '.**')
 
       palavra_secreta = 'banana'.upper()
       letras_acertadas = ['_','_','_','_','_','_']
       tentativas = 0
 
-      print(letras_acertadas)
+      print(f'\n Palavra Secreta: \n {letras_acertadas}')
 
       while(True):
 
-            chute = input('Qual letra? ')
+            chute = input('\n Tente uma letra: ')
             chute = chute.strip().upper()
 
             if(chute in palavra_secreta):
