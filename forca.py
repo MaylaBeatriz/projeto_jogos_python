@@ -26,11 +26,9 @@ def jogar():
             if('_' not in letras_acertadas):
                   imprime_mensagem_vencedor()
                   break
-            elif (tentativas == 6):
-                  imprime_mensagem_perdedor()
+            elif (tentativas == 7):
+                  imprime_mensagem_perdedor(palavra_secreta)
                   break
-
-      print(f'A Palavra Secreta era {palavra_secreta}! \nFim do jogo')
 
 def imprime_mensagem_abertura():
       print(9 * '.**',
@@ -63,8 +61,39 @@ def marca_chute_correto(palavra_secreta, chute, letras_acertadas):
             if (chute == letra):
                   letras_acertadas[index] = letra
             index += 1
+
 def imprime_mensagem_vencedor():
-      print('Você ganhou!')
+      print("Parabéns, você ganhou!")
+      print("       ___________      ")
+      print("      '._==_==_=_.'     ")
+      print("      .-\\:      /-.    ")
+      print("     | (|:.     |) |    ")
+      print("      '-|:.     |-'     ")
+      print("        \\::.    /      ")
+      print("         '::. .'        ")
+      print("           ) (          ")
+      print("         _.' '._        ")
+      print("        '-------'       ")
+
+def imprime_mensagem_perdedor(palavra_secreta):
+      print("Puxa, você foi enforcado!")
+      print("A palavra era {}".format(palavra_secreta))
+      print("    _______________         ")
+      print("   /               \\       ")
+      print("  /                 \\      ")
+      print("//                   \\/\\  ")
+      print("\\|   XXXX     XXXX   | /   ")
+      print(" |   XXXX     XXXX   |/     ")
+      print(" |   XXX       XXX   |      ")
+      print(" |                   |      ")
+      print(" \\__      XXX      __/     ")
+      print("   |\\     XXX     /|       ")
+      print("   | |           | |        ")
+      print("   | I I I I I I I |        ")
+      print("   |  I I I I I I  |        ")
+      print("   \\_             _/       ")
+      print("     \\_         _/         ")
+      print("       \\_______/           ")
 
 def imprime_mensagem_perdedor():
       print('Você perdeu!')
