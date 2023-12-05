@@ -19,7 +19,8 @@ def jogar():
                   marca_chute_correto(palavra_secreta, chute, letras_acertadas)
             else:
                   tentativas += 1
-                  print(f'Restam {6 - tentativas} tentativas.')
+                  desenha_forca(tentativas)
+                  print(f'Restam {7 - tentativas} tentativas.')
 
             print(letras_acertadas)
 
@@ -95,8 +96,55 @@ def imprime_mensagem_perdedor(palavra_secreta):
       print("     \\_         _/         ")
       print("       \\_______/           ")
 
-def imprime_mensagem_perdedor():
-      print('Você perdeu!')
+def desenha_forca(tentativas):
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if(tentativas == 1):
+        print(" |      (_)   ")
+        print(" |            ")
+        print(" |            ")
+        print(" |            ")
+
+    if(tentativas == 2):
+        print(" |      (_)   ")
+        print(" |      \\     ")
+        print(" |            ")
+        print(" |            ")
+
+    if(tentativas == 3):
+        print(" |      (_)   ")
+        print(" |      \\|    ")
+        print(" |            ")
+        print(" |            ")
+
+    if(tentativas == 4):
+        print(" |      (_)   ")
+        print(" |      \\|/   ")
+        print(" |            ")
+        print(" |            ")
+
+    if(tentativas == 5):
+        print(" |      (_)   ")
+        print(" |      \\|/   ")
+        print(" |       |    ")
+        print(" |            ")
+
+    if(tentativas == 6):
+        print(" |      (_)   ")
+        print(" |      \\|/   ")
+        print(" |       |    ")
+        print(" |      /     ")
+
+    if (tentativas == 7):
+        print(" |      (_)   ")
+        print(" |      \\|/   ")
+        print(" |       |    ")
+        print(" |      / \\   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print()
 
 if(__name__ == '__main__'):
       jogar()
