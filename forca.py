@@ -1,9 +1,7 @@
 import random
 def jogar():
 
-      print(9 * '.**',
-            '\nBem vindo ao jogo da Forca!\n',
-            9 * '.**')
+      imprime_mensagem_abertura()
 
       arquivo = open('palavras.txt', 'r')
       palavras = []
@@ -47,3 +45,8 @@ def jogar():
 
 if(__name__ == '__main__'):
       jogar()
+
+def imprime_mensagem_abertura():
+      print(9 * '.**',
+            '\nBem vindo ao jogo da Forca!\n',
+            9 * '.**')
