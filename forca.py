@@ -5,9 +5,8 @@ def jogar():
 
       palavra_secreta = carrega_palavra_secreta()
 
-      numero = random.randrange(0, len(palavras))
-      palavra_secreta = palavras[numero].upper()
-      letras_acertadas = ['_' for letra in palavra_secreta]
+      letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
+
       tentativas = 0
 
       print(f'\n Palavra Secreta: \n {letras_acertadas}')
@@ -38,9 +37,6 @@ def jogar():
 
       print(f'A Palavra Secreta era {palavra_secreta}! \nFim do jogo')
 
-if(__name__ == '__main__'):
-      jogar()
-
 def imprime_mensagem_abertura():
       print(9 * '.**',
             '\nBem vindo ao jogo da Forca!\n',
@@ -58,3 +54,9 @@ def carrega_palavra_secreta():
       numero = random.randrange(0, len(palavras))
       palavra_secreta = palavras[numero].upper()
       return palavra_secreta
+
+def inicializa_letras_acertadas(palavra):
+      return ['_' for letra in palavra]
+
+if(__name__ == '__main__'):
+      jogar()
