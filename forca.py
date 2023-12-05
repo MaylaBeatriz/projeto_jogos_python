@@ -3,12 +3,7 @@ def jogar():
 
       imprime_mensagem_abertura()
 
-      arquivo = open('palavras.txt', 'r')
-      palavras = []
-      for linha in arquivo:
-            linha = linha.strip()
-            palavras.append(linha)
-      arquivo.close()
+      palavra_secreta = carrega_palavra_secreta()
 
       numero = random.randrange(0, len(palavras))
       palavra_secreta = palavras[numero].upper()
@@ -50,3 +45,16 @@ def imprime_mensagem_abertura():
       print(9 * '.**',
             '\nBem vindo ao jogo da Forca!\n',
             9 * '.**')
+def carrega_palavra_secreta():
+      # alimentando a lista palavras[] a partir de um arquivo de texto
+      arquivo = open('palavras.txt', 'r')
+      palavras = []
+      for linha in arquivo:
+            linha = linha.strip()
+            palavras.append(linha)
+      arquivo.close()
+
+      # escolhendo a palavra_secreta usando o random
+      numero = random.randrange(0, len(palavras))
+      palavra_secreta = palavras[numero].upper()
+      return palavra_secreta
