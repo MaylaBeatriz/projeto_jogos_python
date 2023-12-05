@@ -7,9 +7,9 @@ def jogar():
 
       letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
-      tentativas = 0
-
       print(f'\n Palavra Secreta: \n {letras_acertadas}')
+
+      tentativas = 0
 
       while(True):
 
@@ -24,10 +24,10 @@ def jogar():
             print(letras_acertadas)
 
             if('_' not in letras_acertadas):
-                  print('Você ganhou!')
+                  imprime_mensagem_vencedor()
                   break
             elif (tentativas == 6):
-                  print('Você perdeu!')
+                  imprime_mensagem_perdedor()
                   break
 
       print(f'A Palavra Secreta era {palavra_secreta}! \nFim do jogo')
@@ -63,6 +63,11 @@ def marca_chute_correto(palavra_secreta, chute, letras_acertadas):
             if (chute == letra):
                   letras_acertadas[index] = letra
             index += 1
+def imprime_mensagem_vencedor():
+      print('Você ganhou!')
+
+def imprime_mensagem_perdedor():
+      print('Você perdeu!')
 
 if(__name__ == '__main__'):
       jogar()
