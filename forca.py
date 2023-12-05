@@ -16,11 +16,7 @@ def jogar():
             chute = pede_chute()
 
             if(chute in palavra_secreta):
-                  index = 0
-                  for letra in palavra_secreta:
-                        if(chute == letra):
-                              letras_acertadas[index] = letra
-                        index += 1
+                  marca_chute_correto(palavra_secreta, chute, letras_acertadas)
             else:
                   tentativas += 1
                   print(f'Restam {6 - tentativas} tentativas.')
@@ -61,6 +57,12 @@ def pede_chute():
       chute = input('\n Tente uma letra: ')
       chute = chute.strip().upper()
       return chute
+def marca_chute_correto(palavra_secreta, chute, letras_acertadas):
+      index = 0
+      for letra in palavra_secreta:
+            if (chute == letra):
+                  letras_acertadas[index] = letra
+            index += 1
 
 if(__name__ == '__main__'):
       jogar()
